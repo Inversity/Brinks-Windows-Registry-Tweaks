@@ -1,0 +1,116 @@
+[HKEY_CLASSES_ROOT\.ps1]
+@="Microsoft.PowerShellScript.1"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1]
+"EditFlags"=dword:00020000
+"FriendlyTypeName"=hex(2):40,00,22,00,25,00,73,00,79,00,73,00,74,00,65,00,6d,\
+  00,72,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,\
+  33,00,32,00,5c,00,77,00,69,00,6e,00,64,00,6f,00,77,00,73,00,70,00,6f,00,77,\
+  00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,5c,00,76,00,31,00,2e,00,30,00,\
+  5c,00,70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,2e,00,65,\
+  00,78,00,65,00,22,00,2c,00,2d,00,31,00,30,00,33,00,00,00
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\DefaultIcon]
+@="pwsh,1"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell]
+@="Open"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Open\Command]
+@="\notepad++.exe, \"%1\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with]
+"MUIVerb"="Edit or Run with"
+"Extended"=-
+"SubCommands"=""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\001flyout]
+"MUIVerb"="Run with PowerShell 7"
+"Icon"="C:\\Program Files\\PowerShell\\7\\pwsh.exe\"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\001flyout\Command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" \"-Command\" \"if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & '%1'\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\002flyout]
+"MUIVerb"="Run with PowerShell 7 as administrator"
+"HasLUAShield"=""
+"Icon"="C:\\Program Files\\PowerShell\\7\\pwsh.exe\"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\002flyout\Command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" \"-Command\" \"\"& {Start-Process "C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ArgumentList '-ExecutionPolicy RemoteSigned -File \\\"%1\\\"' -Verb RunAs}\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\003flyout]
+"MUIVerb"="Run with PowerShell"
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\003flyout\Command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \"-Command\" \"if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & '%1'\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\004flyout]
+"MUIVerb"="Run with PowerShell as administrator"
+"HasLUAShield"=""
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\004flyout\Command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" \"-Command\" \"\"& {Start-Process "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -ArgumentList '-ExecutionPolicy RemoteSigned -File \\\"%1\\\"' -Verb RunAs}\""
+
+;COMMENT BOI
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\005flyout]
+"MUIVerb"="Edit with PowerShell ISE"
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\005flyout\Command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\" \"%1\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\006flyout]
+"MUIVerb"="Edit with PowerShell ISE as administrator"
+"HasLUAShield"=""
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\006flyout\Command]
+@="pwsh -windowstyle hidden -Command "Start-Process cmd -ArgumentList '/s,/c,start powershell_ise.exe'  -Verb RunAs\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\007flyout]
+"MUIVerb"="Open with Windows Terminal's Default IDE"
+"Icon"="C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\\wt.exe"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\007flyout\Command]
+@="\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\\wt.exe\" \"%1\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\008flyout]
+"MUIVerb"="Open with Windows Terminal's Default IDE as administrator"
+"HasLUAShield"=""
+"Icon"="C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\wt.exe"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\008flyout\Command]
+@="C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\wt.exe -windowstyle hidden -Command \"Start-Process cmd -ArgumentList '/s,/c,start C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\wt.exe \"\"%1\"\"'  -Verb RunAs\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\009flyout]
+"MUIVerb"="Edit with Notepad++"
+"Icon"="C:\Program Files (x86)\Notepad++\notepad++.exe"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\009flyout\Command]
+@="\"C:\Program Files (x86)\Notepad++\notepad++.exe"\"%1\""
+
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\010flyout]
+"MUIVerb"="Edit with Notepad++ as administrator"
+"HasLUAShield"=""
+"Icon"="C:\Program Files (x86)\Notepad++\notepad++.exe"
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Edit-Run-with\shell\010flyout\Command]
+@="pwsh -windowstyle hidden -Command "Start-Process cmd -ArgumentList '/s,/c,start notepad++' -Verb RunAs""
+
